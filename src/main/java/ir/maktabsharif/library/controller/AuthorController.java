@@ -31,6 +31,7 @@ public class AuthorController {
         return ResponseEntity.status(HttpStatus.CREATED).body(response);
     }
 
+
     @PutMapping("/{id}")
     public ResponseEntity<AuthorDto> update(@PathVariable Long id,@RequestBody AuthorDto dto){
         Author entity = authorMapper.toEntity(dto);
